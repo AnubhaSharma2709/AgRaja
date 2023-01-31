@@ -1,6 +1,8 @@
 //Login and Register Text
 const loginText = "Login";
 const registerText = "Register";
+const subText1 = "Don't have an account?";
+const subText2 = "Have an account? ";
 
 //Dail Emergency Contacts
 const number1 = "Dail Ambulance";
@@ -14,4 +16,9 @@ const location2 = "Nearest Pharmacy";
 const location3 = "Nearest Hospital";
 const location4 = "Nearest NGO for Shelter Home";
 
-//Sheild Mode 
+//Sheild Mode
+const safeText = "Sheild Mode will Enable in 15 mins. We will send your location to the nearby contact";
+
+//Community
+//Online Store
+//Other Misc Text
