@@ -1,6 +1,7 @@
 import 'package:agraja/utilis/color_theme.dart';
 import 'package:agraja/utilis/constants.dart';
 import 'package:agraja/utilis/utilis.dart';
+import 'package:agraja/widget/custom_main_button.dart';
 import 'package:agraja/widget/text_feild_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -55,21 +56,34 @@ class _SignInState extends State<SignIn> {
                         ),
                       ),
                       child: Column(
-                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Center(
+                              child: Text(
+                            loginText,
+                            style: TextStyle(
+                                fontSize: 28, fontWeight: FontWeight.bold),
+                          )),
                           TextFieldWidget(
                             title: emailText,
                             controller: emailController,
                             obscureText: false,
                             hintText: HintText1,
                           ),
-                          SizedBox(height: screenSize.height * 0.05),
                           TextFieldWidget(
                             title: passText,
-                            controller: emailController,
+                            controller: passController,
                             obscureText: false,
                             hintText: HintText2,
+                          ),
+                          Center(
+                            child: MainButton(
+                                child: Text(loginText),
+                                color: boxColor,
+                                isLoading: false,
+                                onPressed: (){}
+                            ),
                           ),
                         ],
                       ),
