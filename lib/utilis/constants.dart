@@ -21,6 +21,7 @@ const location4 = "Nearest NGO for Shelter Home";
 
 //Sheild Mode
 const safeText = "Sheild Mode will Enable in 15 mins. We will send your location to the nearby contact";
+const safeText2 = "We are there for you don't worry";
 
 
 //Community
