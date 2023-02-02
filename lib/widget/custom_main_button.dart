@@ -18,9 +18,9 @@ class MainButton extends StatelessWidget {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: color,
-          fixedSize: Size(screenSize.width * 0.5, screenSize.height * 0.04),
+          fixedSize: Size(screenSize.width * 0.6, screenSize.height * 0.05),
         ),
         onPressed: onPressed,
-        child: child);
+        child: isLoading? child : CircularProgressIndicator(color: Colors.pinkAccent,));
   }
 }
