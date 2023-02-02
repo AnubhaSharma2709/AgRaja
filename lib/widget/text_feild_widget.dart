@@ -41,20 +41,20 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           decoration: InputDecoration(
             hintText: widget.hintText,
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
                 width: 1,
                 color: boxColor,
               ),
             ),
-            focusedBorder:OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
                 width: 1,
                 color: Colors.blueAccent,
               ),
             ),
-            errorBorder:OutlineInputBorder(
+            errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
