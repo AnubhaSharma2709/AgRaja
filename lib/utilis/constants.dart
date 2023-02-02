@@ -6,6 +6,17 @@ const subText2 = "Have an account? ";
 const logoutText = "Logout";
 const subText3 = "Take me to the Online Purchase Store";
 
+
+//textfield
+const emailText = "Email";
+const passText = "Password";
+const passtext1 = "Confirm Password";
+const HintText1 = " Enter your Email Id";
+const HintText2 = "Enter your Password";
+const HintText3 = "Enter your Confirmed Password";
+const phoneNo1 = "Enter your Phone Number";
+
+
 //Dail Emergency Contacts
 const number1 = "Dail Ambulance";
 const number2 = "Dail Emergency Contact";

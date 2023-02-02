@@ -1,3 +1,5 @@
+import 'package:agraja/screens/sign_in_screen.dart';
+import 'package:agraja/utilis/color_theme.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp( const AgRaja());
@@ -8,11 +10,16 @@ class AgRaja extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return MaterialApp(
       title:"AgRaja- Your Elder Sister",
       debugShowCheckedModeBanner: false,
-      home: Center(child: Text("Hello World")),
-
+      //theme:
+      theme:ThemeData.light().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+      ),
+      home: const Scaffold(
+        body: SignIn(),
+      ),
     );
   }
 }
