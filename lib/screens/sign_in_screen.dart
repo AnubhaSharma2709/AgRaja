@@ -83,12 +83,41 @@ class _SignInState extends State<SignIn> {
                                   child: Text(loginText),
                                   color: boxColor,
                                   isLoading: false,
-                                  onPressed: (){}
-                              ),
+                                  onPressed: () {}),
                             ),
                           ],
                         ),
                       ),
+                      SizedBox(height: 20,),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          const Text(
+                            'New to AgRaja?',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      MainButton(
+                          child: Text('Create New Account',
+                          style: TextStyle(color: Colors.black),),
+                          color: outColor,
+                          isLoading: false,
+                          onPressed: () {}),
                     ],
                   ),
                 ),
