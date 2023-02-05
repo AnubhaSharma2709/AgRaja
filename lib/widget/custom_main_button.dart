@@ -24,7 +24,7 @@ class MainButton extends StatelessWidget {
         fixedSize: Size(screenSize.width * 0.6, screenSize.height * 0.05),
       ),
       onPressed: onPressed,
-      child: isLoading
+      child: !isLoading
           ? child
           : const Padding(
               padding: EdgeInsets.all(10.0),
