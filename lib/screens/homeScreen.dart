@@ -1,3 +1,4 @@
+import 'package:agraja/widget/homeWidgets/emergency.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,9 +15,14 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Text('Emergency Contacts'),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Emergency Contacts'),
+            ),
+            Emergency(),
           ],
         ),
       ),
     );
   }
+}
