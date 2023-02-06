@@ -1,3 +1,4 @@
+import 'package:agraja/widget/homeWidgets/AmbulanceEmergency.dart';
 import 'package:agraja/widget/homeWidgets/PoliceEmergency.dart';
 import 'package:flutter/material.dart';
 class Emergency extends StatefulWidget {
@@ -18,6 +19,11 @@ class _EmergencyState extends State<Emergency> {
         scrollDirection: Axis.horizontal,
         children: [
           PoliceEmergency(),
+          AmbulanceEmergency(),
+          //AutoMechanic(),
+          //SafeHome(),
+          //ContactEmergency(),
+          //FireEmergency(),
 
         ],
       ),
