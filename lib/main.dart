@@ -1,3 +1,4 @@
+import 'package:agraja/screens/homeScreen.dart';
 import 'package:agraja/screens/sign_in_screen.dart';
 import 'package:agraja/utilis/color_theme.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class AgRaja extends StatelessWidget {
         scaffoldBackgroundColor: backgroundColor,
       ),
       home: const Scaffold(
-        body: SignIn(),
+        body: HomeScreen(),
       ),
     );
   }

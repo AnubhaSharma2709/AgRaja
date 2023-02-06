@@ -19,7 +19,13 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
+  late FocusNode focusNode;
+  bool isInFocus = false;
   @override
+  void initState(){
+    super.initState();
+    focusNode = FocusNode();
+  }
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
