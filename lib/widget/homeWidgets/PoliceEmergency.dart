@@ -23,7 +23,7 @@ class PoliceEmergency extends StatelessWidget {
           child: Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text('Police Emergency Number',
                 style: TextStyle(
@@ -40,11 +40,19 @@ class PoliceEmergency extends StatelessWidget {
                 Container(
                   height: 30,
                   width: 80,
-                  child: Text('100',
-                  style: TextStyle(
-                    color: textColor,
-                    fontSize: MediaQuery.of(context).size.width *
-                  ),),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(
+                    child: Text('100',
+                    style: TextStyle(
+                      color: textColor,
+                      fontSize: MediaQuery.of(context).size.width * 0.035,
+                      fontWeight: FontWeight.bold,
+                    ),
+                ),
+                  ),
                 ),
               ],
             ),
