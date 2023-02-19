@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Hospital extends StatelessWidget {
+class BusStand extends StatelessWidget {
   final Function? onMapFunction;
-  const Hospital({Key? key , this.onMapFunction}) : super(key: key);
+  const BusStand({Key? key , this.onMapFunction}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.only(left: 20),
       child: Column(
         children: [
           ElevatedButton(
             onPressed: () {
-              onMapFunction!('hospitals near me');
+              onMapFunction!('bus stand near me');
             },
             child: Card(
               elevation: 3,
@@ -21,7 +21,7 @@ class Hospital extends StatelessWidget {
               ),
             ),
           ),
-          Text('Hospitals')
+          Text('Bus Stand')
         ],
       ),
     );

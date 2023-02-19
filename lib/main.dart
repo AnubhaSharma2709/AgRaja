@@ -1,5 +1,5 @@
-import 'package:agraja/screens/3.%20Emergency%20Dial/AmbulanceEmergency.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
+import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp( const AgRaja());
@@ -17,12 +17,21 @@ class AgRaja extends StatelessWidget {
       theme:ThemeData.light().copyWith(
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(10.0),
-          child: EmergencyDail(),
-        ),
+      home: Scaffold(
+        body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(
+        parent: AlwaysScrollableScrollPhysics()),
+    padding: const EdgeInsets.all(10.0),
+    child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      EmergencyDail(),
+          SearchNear(),
+          ],
       ),
+    ),
+    ),
     );
   }
 }
