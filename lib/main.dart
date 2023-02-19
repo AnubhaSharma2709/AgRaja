@@ -1,6 +1,3 @@
-import 'package:agraja/screens/homeScreen.dart';
-import 'package:agraja/screens/sign_in_screen.dart';
-import 'package:agraja/utilis/color_theme.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp( const AgRaja());
@@ -16,10 +13,10 @@ class AgRaja extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //theme:
       theme:ThemeData.light().copyWith(
-        scaffoldBackgroundColor: backgroundColor,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: const Scaffold(
-        body: HomeScreen(),
+        body: Center(child: Text('This is the center of page')),
       ),
     );
   }
