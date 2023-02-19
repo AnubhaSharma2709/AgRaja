@@ -1,3 +1,5 @@
+import 'package:agraja/screens/3.%20Emergency%20Dial/AmbulanceEmergency.dart';
+import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp( const AgRaja());
@@ -16,7 +18,10 @@ class AgRaja extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       home: const Scaffold(
-        body: Center(child: Text('This is the center of page')),
+        body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: EmergencyDail(),
+        ),
       ),
     );
   }
