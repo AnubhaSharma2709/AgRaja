@@ -3,8 +3,10 @@ import 'package:agraja/screens/1.User%20Login/login_screen.dart';
 import 'package:agraja/screens/1.User%20Login/services/auth_service.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/color_theme.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
+import 'package:agraja/screens/2.%20Route%20Analysis/route%20analysis.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
+import 'package:agraja/screens/5.Sheild%20Mode/sheildMode.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -136,10 +138,49 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            EmergencyDail(),
-            SearchNear(),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: RouteAnalysis(),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Emergency Contacts',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: MediaQuery.of(context).size.width * 0.045,
+                    ),
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height* 0.02),
+                  EmergencyDail(),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Nearest Places that you should know',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: MediaQuery.of(context).size.width * 0.045,
+                    ),
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height* 0.02),
+                  SearchNear(),
+                ],
+              ),
+            ),
+           SheildMode(),
           ],
         ),
       ),

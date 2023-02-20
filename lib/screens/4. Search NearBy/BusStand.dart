@@ -26,9 +26,10 @@ class BusStand extends StatelessWidget {
               width: screenSize.width * 0.09,
             ),
           ),
-          Text('Bus \n Stand',
+          Text('Bus\nStand',
             style: TextStyle(
               fontSize: MediaQuery.of(context).size.width * 0.03,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],

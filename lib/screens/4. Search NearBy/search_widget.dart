@@ -23,8 +23,8 @@ class SearchNear extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = utilis().getscreenSize();
     return Container(
-      height: screenSize.height * 0.5,
-      width: MediaQuery.of(context).size.width ,
+      height: screenSize.height * 0.16,
+      width: screenSize.width,
       child: ListView(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
