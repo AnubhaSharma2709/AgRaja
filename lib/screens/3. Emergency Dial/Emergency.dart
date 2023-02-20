@@ -1,4 +1,5 @@
 import 'package:agraja/screens/3.%20Emergency%20Dial/AmbulanceEmergency.dart';
+import 'package:agraja/screens/3.%20Emergency%20Dial/EmergencyContact/addcontact.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/PoliceEmergency.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,10 @@ class EmergencyDail extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         children: [
+
           PoliceEmergency(),
           AmbulanceEmergency(),
+         // AddContactsPage(),
         ],
       ),
     );
