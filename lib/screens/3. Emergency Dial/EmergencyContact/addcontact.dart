@@ -7,6 +7,8 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sqflite/sqflite.dart';
 
+import '../../1.User Login/utilis/constants.dart';
+
 class AddContactsPage extends StatefulWidget {
   const AddContactsPage({super.key});
 
@@ -56,80 +58,95 @@ class _AddContactsPageState extends State<AddContactsPage> {
     if (contactList == null) {
       contactList = [];
     }
-    return OutlinedButton(
-              onPressed: () async {
-                bool result = await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ContactsPage(),
-                    ));
-                if (result == true) {
-                  showList();
-                }
-              },
-              style: OutlinedButton.styleFrom(
-                side: BorderSide(width: 1.0, color: Colors.pink),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.001,
+    return SafeArea(
+      child: Container(
+        padding: EdgeInsets.all(12),
+        child: Column(
+          children: [
+            PrimaryButton(
+                title: "Add Trusted Contacts",
+                onPressed: () async {
+                  bool result = await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ContactsPage(),
+                      ));
+                  if (result == true) {
+                    showList();
+                  }
+                }),
+            Expanded(
+              child: ListView.builder(
+                // shrinkWrap: true,
+                itemCount: count,
+                itemBuilder: (BuildContext context, int index) {
+                  return Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListTile(
+                        title: Text(contactList![index].name),
+                        trailing: Container(
+                          width: 100,
+                          child: Row(
+                            children: [
+                              IconButton(
+                                  onPressed: () async {
+                                    await FlutterPhoneDirectCaller.callNumber(
+                                        contactList![index].number);
+                                  },
+                                  icon: Icon(
+                                    Icons.call,
+                                    color: Colors.red,
+                                  )),
+                              IconButton(
+                                  onPressed: () {
+                                    deleteContact(contactList![index]);
+                                  },
+                                  icon: Icon(
+                                    Icons.delete,
+                                    color: Colors.red,
+                                  )),
+                            ],
                           ),
-                          Text(
-                            'Add Emergency Contact',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize:
-                                  MediaQuery.of(context).size.width * 0.04,
-                            ),
-                          ),
-                          ListView.builder(
-                            // shrinkWrap: true,
-                            itemCount: count,
-                            itemBuilder: (BuildContext context, int index) {
-                                  child: ListTile(
-                                    title: Text(contactList![index].name),
-                                    trailing: Container(
-                                      width: screenSize.width * 0.3,
-                                      child: Column(
-                                        children: [
-                                          IconButton(
-                                              onPressed: () async {
-                                                await FlutterPhoneDirectCaller
-                                                    .callNumber(
-                                                        contactList![index]
-                                                            .number);
-                                              },
-                                              icon: Icon(
-                                                Icons.call,
-                                                color: Colors.red,
-                                              )),
-                                          IconButton(
-                                              onPressed: () {
-                                                deleteContact(
-                                                    contactList![index]);
-                                              },
-                                              icon: Icon(
-                                                Icons.delete,
-                                                color: Colors.red,
-                                              )),
-                                        ],
-                                      ),
-                                    ),
-                                );
-                            },
-                          ),
-                        ],
+                        ),
                       ),
                     ),
-                ),
-              );
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
+class PrimaryButton extends StatelessWidget {
+  final String title;
+  final Function onPressed;
+  bool loading;
+  PrimaryButton(
+      {required this.title, required this.onPressed, this.loading = false});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 60,
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () {
+          onPressed();
+        },
+        child: Text(
+          title,
+          style: TextStyle(fontSize: 18),
+        ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: primaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30))),
+      ),
+    );
   }
 }
