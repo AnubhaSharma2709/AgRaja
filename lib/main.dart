@@ -1,16 +1,42 @@
 import 'package:agraja/homepage.dart';
+import 'package:agraja/screens/1.User%20Login/helper/helper_function.dart';
+import 'package:agraja/screens/1.User%20Login/login_screen.dart';
+import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const AgRaja());
 }
 
-class AgRaja extends StatelessWidget {
+
+class AgRaja extends StatefulWidget {
   const AgRaja({Key? key}) : super(key: key);
 
   @override
+  State<AgRaja> createState() => _AgRajaState();
+}
+
+class _AgRajaState extends State<AgRaja> {
+  bool _isSignedIn = false;
+  @override
+  void initState(){
+    super.initState();
+    getUserLoggedInStatus();
+  }
+  getUserLoggedInStatus() async {
+    await HelperFunctions.getUserLoggedInStatus().then((value) {
+      if (value != null) {
+        setState(() {
+          _isSignedIn = value;
+        });
+      }
+    });
+  }
   Widget build(BuildContext context) {
-    return MaterialApp(
+        return MaterialApp(
       title: "AgRaja- Your Elder Sister",
       debugShowCheckedModeBanner: false,
       //theme:
@@ -18,15 +44,8 @@ class AgRaja extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       home: Scaffold(
-        appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.white),
-            backgroundColor: Colors.pinkAccent,
-            title: Image.asset(
-              'lib/assets/logo.jpeg',
-              height: MediaQuery.of(context).size.height * 0.12,
-              width: MediaQuery.of(context).size.width * 0.12,
-            )),
-        body: HomePage(),
+
+        body: _isSignedIn? const HomePage() : const SignInScreen(),
       ),
     );
   }

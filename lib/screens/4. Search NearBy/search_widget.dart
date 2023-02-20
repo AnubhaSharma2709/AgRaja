@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 //import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../1.User Login/utilis/utilis.dart';
+
 class SearchNear extends StatelessWidget {
   const SearchNear({Key? key}) : super(key: key);
 
@@ -19,9 +21,10 @@ class SearchNear extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = utilis().getscreenSize();
     return Container(
-      height: 90,
-      width: MediaQuery.of(context).size.width,
+      height: screenSize.height * 0.5,
+      width: MediaQuery.of(context).size.width ,
       child: ListView(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,

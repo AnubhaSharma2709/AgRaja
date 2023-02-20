@@ -1,3 +1,4 @@
+import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
 import 'package:flutter/material.dart';
 
 class PoliceStation extends StatelessWidget {
@@ -6,22 +7,26 @@ class PoliceStation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = utilis().getscreenSize();
     return Padding(
       padding: const EdgeInsets.only(left: 20),
       child: Column(
         children: [
-          ElevatedButton(
+          OutlinedButton(
             onPressed: () {
-              onMapFunction!('Police Stations near me');
+              onMapFunction!('Police Station near me');
             },
-            child: Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
+            child: Image.asset(
+              'lib/assets/1.png',
+             height: screenSize.height * 0.10,
+              width: screenSize.width * 0.09,
             ),
           ),
-          Text('Police Stations')
+          Text('Police\n Station',
+              style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.03,
+              ),
+              ),
         ],
       ),
     );
