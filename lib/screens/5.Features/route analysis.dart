@@ -20,8 +20,8 @@ class RouteAnalysis extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('lib/assets/police.png',
-                height: MediaQuery.of(context).size.height * 0.09,
-                width: screenSize.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.15,
+                width: screenSize.width * 0.25,
               ),
               Expanded(
                 child: Column(

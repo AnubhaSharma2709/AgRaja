@@ -26,8 +26,8 @@ class PoliceEmergency extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                    Image.asset('lib/assets/police.png',
-                     height: MediaQuery.of(context).size.height * 0.09,
-                     width: screenSize.width * 0.4,
+                     height: MediaQuery.of(context).size.height * 0.12,
+                     width: screenSize.width * 0.3,
                    ),
                   Expanded(
                     child: Column(
@@ -38,7 +38,7 @@ class PoliceEmergency extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.01,
                         ),
                         Text(
-                          'Women\nHelpline\nNumber',
+                          '        Women\nHelpline Number',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,

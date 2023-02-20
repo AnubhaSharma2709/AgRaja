@@ -3,10 +3,9 @@ import 'package:agraja/screens/1.User%20Login/login_screen.dart';
 import 'package:agraja/screens/1.User%20Login/services/auth_service.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/color_theme.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
-import 'package:agraja/screens/Features/route%20analysis.dart';
+import 'package:agraja/screens/5.Features/features.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
-import 'package:agraja/screens/Features/sheildMode.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -142,7 +141,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Padding(
               padding: const EdgeInsets.all(5.0),
-              child: RouteAnalysis(),
+              child: Features(),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
@@ -180,7 +179,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-           SheildMode(),
           ],
         ),
       ),

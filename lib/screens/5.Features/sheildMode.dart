@@ -9,7 +9,7 @@ class SheildMode extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = utilis().getscreenSize();
     return Padding(
-      padding: const EdgeInsets.only(left: 10.0, bottom: 5),
+      padding: const EdgeInsets.only(left: 20.0, bottom: 5),
       child:OutlinedButton(
         onPressed: null ,
         style: OutlinedButton.styleFrom(
@@ -21,8 +21,8 @@ class SheildMode extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('lib/assets/police.png',
-                height: MediaQuery.of(context).size.height * 0.09,
-                width: screenSize.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.15,
+                width: screenSize.width * 0.25,
               ),
               Expanded(
                 child: Column(
