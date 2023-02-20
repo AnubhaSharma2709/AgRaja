@@ -24,7 +24,7 @@ class AmbulanceEmergency extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/assets/police.png',
+              Image.asset('lib/assets/ambulance.png',
                 height: MediaQuery.of(context).size.height * 0.13,
                 width: screenSize.width * 0.3,
               ),

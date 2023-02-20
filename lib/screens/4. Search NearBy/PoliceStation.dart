@@ -20,7 +20,7 @@ class PoliceStation extends StatelessWidget {
               side: BorderSide(width: 1.0, color: Colors.white),
             ),
             child: Image.asset(
-              'lib/assets/1.png',
+              'lib/assets/police-location.png',
              height: screenSize.height * 0.09,
               width: screenSize.width * 0.09,
             ),
