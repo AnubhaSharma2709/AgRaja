@@ -16,6 +16,9 @@ class PoliceStation extends StatelessWidget {
             onPressed: () {
               onMapFunction!('Police Station near me');
             },
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(width: 1.0, color: Colors.white),
+            ),
             child: Image.asset(
               'lib/assets/1.png',
              height: screenSize.height * 0.09,
