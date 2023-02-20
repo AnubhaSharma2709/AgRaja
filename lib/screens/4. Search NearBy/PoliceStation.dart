@@ -18,7 +18,7 @@ class PoliceStation extends StatelessWidget {
             },
             child: Image.asset(
               'lib/assets/1.png',
-             height: screenSize.height * 0.10,
+             height: screenSize.height * 0.09,
               width: screenSize.width * 0.09,
             ),
           ),

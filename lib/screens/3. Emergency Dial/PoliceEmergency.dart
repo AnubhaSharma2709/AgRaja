@@ -18,7 +18,7 @@ class PoliceEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: ElevatedButton(
-          onPressed: () => _callNumber('9560139590'),
+          onPressed: () => _callNumber('9958510119'),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
