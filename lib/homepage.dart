@@ -6,6 +6,7 @@ import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
 import 'package:agraja/screens/5.Features/features.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
+import 'package:agraja/screens/6.Online%20Women%20Commnity/community.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -179,6 +180,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            Community(),
           ],
         ),
       ),
