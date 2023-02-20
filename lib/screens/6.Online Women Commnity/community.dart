@@ -20,7 +20,7 @@ class Community extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/assets/police.png',
+              Image.asset('lib/assets/community.png',
                 height: MediaQuery.of(context).size.height * 0.07,
                 width: screenSize.width * 0.2,
               ),
