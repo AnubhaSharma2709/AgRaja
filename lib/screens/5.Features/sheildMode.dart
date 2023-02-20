@@ -37,7 +37,7 @@ class _SheildModeState extends State<SheildMode> {
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      Fluttertoast.showToast(msg: "Location permissions are  denind");
+      Fluttertoast.showToast(msg: "Location permissions are denind");
       if (permission == LocationPermission.deniedForever) {
         await Geolocator.requestPermission();
         Fluttertoast.showToast(
@@ -141,7 +141,7 @@ class _SheildModeState extends State<SheildMode> {
     return Padding(
       padding: const EdgeInsets.only(left: 20.0, bottom: 5),
       child:OutlinedButton(
-        onPressed: (),
+        onPressed: () => SafeHome(context),
         style: OutlinedButton.styleFrom(
           side: BorderSide(width: 1.0, color: Colors.pink),
         ),
