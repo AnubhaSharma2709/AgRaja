@@ -3,10 +3,10 @@ import 'package:agraja/screens/1.User%20Login/login_screen.dart';
 import 'package:agraja/screens/1.User%20Login/services/auth_service.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/color_theme.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
-import 'package:agraja/screens/2.%20Route%20Analysis/route%20analysis.dart';
+import 'package:agraja/screens/Features/route%20analysis.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
-import 'package:agraja/screens/5.Sheild%20Mode/sheildMode.dart';
+import 'package:agraja/screens/Features/sheildMode.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

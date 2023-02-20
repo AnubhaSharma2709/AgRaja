@@ -11,26 +11,26 @@ class SheildMode extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, bottom: 5),
       child:OutlinedButton(
-        onPressed:null,
+        onPressed: null ,
         style: OutlinedButton.styleFrom(
           side: BorderSide(width: 1.0, color: Colors.pink),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('lib/assets/police.png',
-                height: MediaQuery.of(context).size.height * 0.25,
+                height: MediaQuery.of(context).size.height * 0.09,
                 width: screenSize.width * 0.4,
               ),
               Expanded(
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
+                      height: MediaQuery.of(context).size.height * 0.001,
                     ),
                     Text(
                       'Sheild Mode On',
@@ -48,6 +48,7 @@ class SheildMode extends StatelessWidget {
         ),
       ),
     );
+
 
   }
 }

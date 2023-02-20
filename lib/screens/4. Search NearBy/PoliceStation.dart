@@ -25,7 +25,7 @@ class PoliceStation extends StatelessWidget {
               width: screenSize.width * 0.09,
             ),
           ),
-          Text('Police\n Station',
+          Text('Police\nStation',
               style: TextStyle(
                   fontSize: MediaQuery.of(context).size.width * 0.03,
                   fontWeight: FontWeight.bold,
