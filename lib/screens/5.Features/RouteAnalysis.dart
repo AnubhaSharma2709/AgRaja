@@ -21,7 +21,6 @@ class RouteAnalysis extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: TextField(
                         decoration:InputDecoration(
-
                           label: Text('From',
                             style: TextStyle(
                                 color: textColor,
@@ -87,13 +86,20 @@ class RouteAnalysis extends StatelessWidget {
                 ),
                   ],
                 ),
-            ElevatedButton(
-                onPressed: null,
-                child: Text('Finding the best route'),
-            ),
-          ],
-        ),
+           OutlinedButton(
+          onPressed: () {},
+          style: OutlinedButton.styleFrom(
+            backgroundColor: primaryColor,
+            side: BorderSide(width: 1.0, color: primaryColor),
+          ), child: Text('Find the best route',
+           style: TextStyle(
+             color: Colors.black,
+
+           ),),
+           ),
+      ],
+          ),
       ),
-      );
+    );
   }
 }

@@ -7,6 +7,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import '../1.User Login/utilis/constants.dart';
 import '../1.User Login/utilis/utilis.dart';
 
 class SheildMode extends StatefulWidget {
@@ -143,17 +144,17 @@ class _SheildModeState extends State<SheildMode> {
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, bottom: 5),
       child:OutlinedButton(
-        onPressed: ()
+        onPressed: () => SafeHome(context),
         style: OutlinedButton.styleFrom(
-          side: BorderSide(width: 1.0, color: primaryColor),
+          side: BorderSide(width: 0.0, color: Colors.white),
         ),
         child: Padding(
           padding: const EdgeInsets.all(3.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/assets/police.png',
-                height: MediaQuery.of(context).size.height * 0.04,
+              Image.asset('lib/assets/sheild-mode.jpg',
+                height: MediaQuery.of(context).size.height * 0.03,
                 width: screenSize.width * 0.1,
               ),
               Expanded(
@@ -161,15 +162,12 @@ class _SheildModeState extends State<SheildMode> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
                     Text(
-                      'Sheild Mode ON',
+                      'Sheild Mode\n       ON',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: MediaQuery.of(context).size.width * 0.01,
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                       ),
                     ),
                   ],

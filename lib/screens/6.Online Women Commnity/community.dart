@@ -1,3 +1,5 @@
+import 'package:agraja/screens/1.User%20Login/utilis/constants.dart';
+import 'package:agraja/screens/6.Online%20Women%20Commnity/slider_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../1.User Login/utilis/utilis.dart';
@@ -9,45 +11,40 @@ class Community extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = utilis().getscreenSize();
     return Padding(
-      padding: const EdgeInsets.only(left: 10.0, bottom: 5),
-      child:OutlinedButton(
+      padding: const EdgeInsets.all(0.0),
+      child: OutlinedButton(
         onPressed: () {},
         style: OutlinedButton.styleFrom(
-          side: BorderSide(width: 1.0, color: Colors.pink),
+          side: BorderSide(width: 1.0, color: Colors.white),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset('lib/assets/community.png',
-                height: MediaQuery.of(context).size.height * 0.07,
-                width: screenSize.width * 0.2,
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.001,
-                    ),
-                    Text(
-                      'Join the Women Community',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: MediaQuery.of(context).size.width * 0.04,
-                      ),
-                    ),
-                  ],
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  'lib/assets/community.png',
+                  height: MediaQuery.of(context).size.height * 0.039,
                 ),
-              )
-            ],
-          ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                Text(
+                  'Join Women Community',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: MediaQuery.of(context).size.width * 0.045,
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.15),
+                Icon(Icons.arrow_right_alt_rounded,
+                color: primaryColor,),
+              ],
+            ),
+            SliderScreen(),
+          ],
         ),
       ),
     );
-
   }
 }

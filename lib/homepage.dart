@@ -6,6 +6,7 @@ import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
 import 'package:agraja/screens/5.Features/RouteAnalysis.dart';
+import 'package:agraja/screens/5.Features/sheildMode.dart';
 import 'package:agraja/screens/6.Online%20Women%20Commnity/community.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +52,9 @@ class _HomePageState extends State<HomePage> {
             height: screenSize.height *0.09,
             width: screenSize.width *0.55,
           ),
+        actions: [
+          SheildMode(),
+        ],
       ),
       drawer: Drawer(
         backgroundColor: backgroundColor,
@@ -184,58 +188,76 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Emergency Contacts',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: MediaQuery.of(context).size.width * 0.045,
-                    ),
+                  Row(
+                    children: [
+                      Image.asset('lib/assets/contact.jpg',
+                        height: MediaQuery.of(context).size.height * 0.039,
+                      ),
+                      Text('Emergency Contacts',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width * 0.045,
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height* 0.02),
+                  SizedBox(height: MediaQuery.of(context).size.height* 0.009),
                   EmergencyDail(),
                 ],
               ),
             ),
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/assets/route analysis.png',
-                  height: screenSize.height * 0.039,
-                ),
-                SizedBox(width: MediaQuery.of(context).size.width* 0.02),
-                Text('Route Analysis',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: MediaQuery.of(context).size.width * 0.045,
-                  ),),
-              ],),
-            RouteAnalysis(),
-          ],
-        ),
-            Padding(
-              padding: const EdgeInsets.all(3.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Nearest Places that you should know',
+                  Image.asset(
+                    'lib/assets/route analysis.png',
+                    height: MediaQuery.of(context).size.height * 0.039,
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width* 0.009),
+                  Text('Route Analysis',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: MediaQuery.of(context).size.width * 0.045,
-                    ),
+                    ),),
+                ],),
+              RouteAnalysis(),
+            ],
+          ),
+        ),
+            Community(),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Image.asset('lib/assets/nearby-2.png',
+                        height: MediaQuery.of(context).size.height * 0.039,
+                      ),
+                      SizedBox(width: MediaQuery.of(context).size.width* 0.02),
+                      Text('Places Near You',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width * 0.045,
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height* 0.02),
                   SearchNear(),
                 ],
               ),
             ),
-            Community(),
+
       ],
         ),
     ),

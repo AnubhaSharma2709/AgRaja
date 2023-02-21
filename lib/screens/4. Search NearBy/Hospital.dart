@@ -10,7 +10,7 @@ class Hospital extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = utilis().getscreenSize();
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: const EdgeInsets.all(5.0),
       child: Column(
         children: [
           OutlinedButton(

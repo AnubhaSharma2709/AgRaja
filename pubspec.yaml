@@ -48,6 +48,7 @@ dependencies:
   background_sms: ^0.0.4
   geolocator: ^9.0.2
   geocoding: ^2.0.5
+  carousel_slider: ^4.2.1
 
 
 

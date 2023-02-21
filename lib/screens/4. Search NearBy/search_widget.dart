@@ -1,5 +1,6 @@
 import 'package:agraja/screens/4.%20Search%20NearBy/BusStand.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/Hospital.dart';
+import 'package:agraja/screens/4.%20Search%20NearBy/PetrolPump.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/Pharmacy.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/PoliceStation.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class SearchNear extends StatelessWidget {
           PoliceStation(onMapFunction: openMap),
           Pharmacy(onMapFunction: openMap),
           BusStand(onMapFunction: openMap),
+          PetrolPump(onMapFunction: openMap),
         ],
       ),
     );
