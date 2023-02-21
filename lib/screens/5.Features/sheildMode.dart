@@ -37,14 +37,15 @@ class _SheildModeState extends State<SheildMode> {
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      Fluttertoast.showToast(msg: "Location permissions are denind");
+      Fluttertoast.showToast(msg: "Location permissions are  denind");
       if (permission == LocationPermission.deniedForever) {
         await Geolocator.requestPermission();
         Fluttertoast.showToast(
             msg: "Location permissions are permanently denind");
       }
     }
-    Geolocator.getCurrentPosition(
+    else {
+      Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
         forceAndroidLocationManager: true)
         .then((Position position) {
@@ -56,6 +57,7 @@ class _SheildModeState extends State<SheildMode> {
     }).catchError((e) {
       Fluttertoast.showToast(msg: e.toString());
     });
+    }
   }
 
   _getAddressFromLatLon() async {
@@ -178,7 +180,5 @@ class _SheildModeState extends State<SheildMode> {
         ),
       ),
     );
-
-
   }
 }
