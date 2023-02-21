@@ -17,7 +17,7 @@ const double defaultPadding = 16.0;
 const double defaultBorderRadius = 12.0;
 
 
-Color primaryColor = Color(0xfffc3b77);
+Color primaryColor = Color(0xFFFFAFE8);
 
 void goTo(BuildContext context, Widget nextScreen) {
   Navigator.push(

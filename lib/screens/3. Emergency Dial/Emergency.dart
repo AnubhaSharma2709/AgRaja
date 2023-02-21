@@ -10,7 +10,7 @@ class EmergencyDail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.23,
+      height: MediaQuery.of(context).size.height * 0.1,
       child: ListView(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,

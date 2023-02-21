@@ -3,9 +3,9 @@ import 'package:agraja/screens/1.User%20Login/login_screen.dart';
 import 'package:agraja/screens/1.User%20Login/services/auth_service.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/color_theme.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
-import 'package:agraja/screens/5.Features/features.dart';
 import 'package:agraja/screens/3.%20Emergency%20Dial/Emergency.dart';
 import 'package:agraja/screens/4.%20Search%20NearBy/search_widget.dart';
+import 'package:agraja/screens/5.Features/RouteAnalysis.dart';
 import 'package:agraja/screens/6.Online%20Women%20Commnity/community.dart';
 import 'package:flutter/material.dart';
 
@@ -42,12 +42,14 @@ class _HomePageState extends State<HomePage> {
     Size screenSize = utilis().getscreenSize();
     return Scaffold(
       appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.pink),
+          iconTheme: IconThemeData(color: outlineBorder,
+          size: MediaQuery.of(context).size.width * 0.05),
           backgroundColor: Colors.white,
-          title: Image.asset(
+        title: Image.asset(
             'lib/assets/logo.jpeg',
-            height: screenSize.height *0.5,
-            width: screenSize.width *0.4,
+            alignment: AlignmentDirectional.center,
+            height: screenSize.height *0.09,
+            width: screenSize.width *0.55,
           ),
       ),
       drawer: Drawer(
@@ -55,11 +57,6 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 50),
           children: <Widget>[
-            Icon(
-              Icons.account_circle,
-              size: 150,
-              color: colorBorder,
-            ),
             const SizedBox(
               height: 15,
             ),
@@ -135,15 +132,52 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics()),
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(9.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Features(),
-            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    'lib/assets/girl-icon.png',
+                    height: screenSize.height * 0.069,
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width* 0.21),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Row(
+                        children: [
+                          Text('Hey',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize:MediaQuery.of(context).size.width * 0.045),),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.009,
+                          ),
+                          Text(
+                            userName,
+                            style:TextStyle(fontWeight: FontWeight.bold,
+                                fontSize:MediaQuery.of(context).size.width * 0.045),
+                          ),
+
+                        ],
+                      ),
+                      Text('We admire your strong personality',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.width * 0.037,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+                  SizedBox(height: MediaQuery.of(context).size.height* 0.02),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Column(
@@ -162,6 +196,27 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'lib/assets/route analysis.png',
+                  height: screenSize.height * 0.039,
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width* 0.02),
+                Text('Route Analysis',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: MediaQuery.of(context).size.width * 0.045,
+                  ),),
+              ],),
+            RouteAnalysis(),
+          ],
+        ),
             Padding(
               padding: const EdgeInsets.all(3.0),
               child: Column(
@@ -181,9 +236,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Community(),
-          ],
+      ],
         ),
-      ),
+    ),
     );
+
   }
 }

@@ -1,3 +1,4 @@
+import 'package:agraja/screens/1.User%20Login/utilis/constants.dart';
 import 'package:agraja/screens/1.User%20Login/utilis/utilis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
@@ -17,16 +18,16 @@ class AmbulanceEmergency extends StatelessWidget {
       child:OutlinedButton(
         onPressed: () => _callNumber('9958510119'),
         style: OutlinedButton.styleFrom(
-          side: BorderSide(width: 1.0, color: Colors.pink),
+          side: BorderSide(width: 1.0, color: primaryColor),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(4.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('lib/assets/ambulance.png',
-                height: MediaQuery.of(context).size.height * 0.13,
-                width: screenSize.width * 0.3,
+                height: MediaQuery.of(context).size.height * 0.04,
+                width: screenSize.width * 0.1,
               ),
               Expanded(
                 child: Column(
@@ -41,7 +42,7 @@ class AmbulanceEmergency extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                        fontSize: MediaQuery.of(context).size.width * 0.03,
                       ),
                     ),
                   ],

@@ -141,20 +141,20 @@ class _SheildModeState extends State<SheildMode> {
   Widget build(BuildContext context) {
     Size screenSize = utilis().getscreenSize();
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0, bottom: 5),
+      padding: const EdgeInsets.only(left: 10.0, bottom: 5),
       child:OutlinedButton(
-        onPressed: () => SafeHome(context),
+        onPressed: ()
         style: OutlinedButton.styleFrom(
-          side: BorderSide(width: 1.0, color: Colors.pink),
+          side: BorderSide(width: 1.0, color: primaryColor),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(3.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/assets/sheild-mode.jpg',
-                height: MediaQuery.of(context).size.height * 0.15,
-                width: screenSize.width * 0.25,
+              Image.asset('lib/assets/police.png',
+                height: MediaQuery.of(context).size.height * 0.04,
+                width: screenSize.width * 0.1,
               ),
               Expanded(
                 child: Column(
@@ -162,14 +162,14 @@ class _SheildModeState extends State<SheildMode> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.001,
+                      height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     Text(
-                      'Sheild Mode On',
+                      'Sheild Mode ON',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                        fontSize: MediaQuery.of(context).size.width * 0.01,
                       ),
                     ),
                   ],
@@ -180,5 +180,6 @@ class _SheildModeState extends State<SheildMode> {
         ),
       ),
     );
+
   }
 }

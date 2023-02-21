@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 //Constants Color for Login and Register Ui
 const Color textColor = Color(0xff000000);
-const Color outlineBorder = Colors.pink;
-const Color colorBorder = Colors.pink;
+const Color outlineBorder = Color(0xffFFAFE8);
+const Color colorBorder = Color(0xffFFAFE8);
 const Color errorBorder = Color(0xffFF1E1E);
 const Color colorButton = Color(0xffD0CBCB);
 const Color backgroundColor = Colors.white;
